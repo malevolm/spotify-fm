@@ -1,0 +1,25 @@
+version: "3.3"
+services:
+  webapi:
+    build: webapi
+    ports:
+      - "0.0.0.0:8000:8000"
+    depends_on:
+      - streamer
+    env_file:
+      - config.env
+    restart: always
+  streamer:
+    build: streamer
+    ports:
+      - "0.0.0.0:8080:20300"
+    env_file:
+      - config.env
+    restart: always
+  ircbot:
+    build: ircbot
+    depends_on:
+      - webapi
+    env_file:
+      - config.env
+    restart: always
