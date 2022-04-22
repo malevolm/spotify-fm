@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "axios": "^0.26.1",
+    "body-parser": "^1.19.2",
+    "express": "^5.0.0-beta.1",
+    "moment-timezone": "^0.5.34",
+    "open": "^8.4.0",
+    "spotify-web-api-node": "^5.0.2"
+  }
+}
